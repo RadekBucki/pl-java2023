@@ -3,18 +3,10 @@ package java15.record;
 // implement here
 // change this class to record
 // throw IllegalArgumentException when capacity in negative while creating
-public class Car {
-
-
-    public Car(String make, int capacity) {
-
-    }
-
-    public String make() {
-        return "";
-    }
-
-    public int capacity() {
-        return 0;
+public record Car(String make, int capacity) {
+    public Car {
+        if (capacity < 0) {
+            throw new IllegalArgumentException("Capacity cannot be negative");
+        }
     }
 }

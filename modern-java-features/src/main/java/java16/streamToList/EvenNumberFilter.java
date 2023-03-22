@@ -12,6 +12,8 @@ public class EvenNumberFilter {
         // 3. collect to list
 
 
-        return allNumbers;
+        return allNumbers.stream()
+                .filter(number -> number % 2 == 0)
+                .toList();
     }
 }

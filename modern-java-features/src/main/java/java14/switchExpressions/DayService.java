@@ -6,6 +6,9 @@ public class DayService {
         // implement here
         // return number of letters for working days or throw exception for the other
 
-        return 0;
+        return switch (day) {
+            case MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY -> day.name().length();
+            default -> throw new IllegalStateException("Not a working day");
+        };
     }
 }

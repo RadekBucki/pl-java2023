@@ -8,6 +8,6 @@ public class DataService {
         // get username from DataProvider.
         // Return value or throw exception if there is no value
 
-        return "";
+        return dataProvider.getUsername(id).orElseThrow();
     }
 }

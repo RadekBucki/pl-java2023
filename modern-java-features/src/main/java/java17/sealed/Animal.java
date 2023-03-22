@@ -1,4 +1,4 @@
 package java17.sealed;
 
-public class Animal {
+public sealed class Animal permits Mammal, Reptile {
 }

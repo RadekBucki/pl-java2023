@@ -1,4 +1,4 @@
 package java17.sealed;
 
-public class GermanShepherd {
+public final class GermanShepherd extends Dog {
 }

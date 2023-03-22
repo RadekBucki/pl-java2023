@@ -1,4 +1,4 @@
 package java17.sealed;
 
-public class Human {
+public class Human extends Mammal {
 }

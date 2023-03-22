@@ -7,6 +7,6 @@ public class PalindromeChecker {
         // TIP: you can use StringBuilder.reverse method
 
 
-        return false;
+        return text.equals(new StringBuilder(text).reverse().toString());
     }
 }

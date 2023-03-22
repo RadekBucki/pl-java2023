@@ -6,6 +6,8 @@ public class NoIndentTextFormatter {
         // implement here
         // remove indent
 
-        return "";
+        return text.lines()
+                .map(String::stripLeading)
+                .reduce("", (s1, s2) -> s1 + s2 + "\n");
     }
 }

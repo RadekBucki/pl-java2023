@@ -60,7 +60,14 @@ public class ParticipationService {
         // then collect theirs names to list (use Collectors.mapping)
         // collector2: return sum of all participants
 
-
-        return new EventParticipation(Collections.emptyList(), 0);
+        return new EventParticipation(
+                guests.stream()
+                        .filter(Guest::isParticipating)
+                        .map(Guest::getName)
+                        .toList(),
+                guests.stream()
+                        .map(Guest::getParticipantsNumber)
+                        .reduce(0, Integer::sum)
+        );
     }
 }
